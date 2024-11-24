@@ -18,7 +18,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
   && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 # Copy only requirements.txt first to cache layer
-COPY requirements.txt /usr/src/app/
+COPY requirements.txt /Users/Akash/Desktop/Activity 1/Django-Backend-main/micro-ecommerce/
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
