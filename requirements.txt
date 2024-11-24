@@ -1,0 +1,15 @@
+Django
+django-environ
+psycopg2
+djangorestframework
+django-polymorphic
+django-rest-polymorphic
+djangorestframework-simplejwt
+django-filter
+django-cors-headers
+Pillow
+django-autoslug
+hashids
+amqp
+celery
+kombu
