@@ -19,7 +19,3 @@ provider "aws" {
     }
   }
 }
-
-provider "template" {
-  # No version is needed here as it's now handled in required_providers
-}

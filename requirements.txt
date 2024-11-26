@@ -13,3 +13,4 @@ hashids
 amqp
 celery
 kombu
+gunicorn>=20.0.4
