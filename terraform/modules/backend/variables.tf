@@ -1,9 +1,9 @@
 variable "bucket_name" {
   description = "Name of the S3 bucket"
-  default     = "codewithmuh-terraform-state-backend-990"
+  default     = "terraform-state-backend-1"
 }
 
 variable "dynamodb_table_name" {
   description = "Name of the DynamoDB table"
-  default     = "codewithmuh-db-terraform-state-lock"
+  default     = "akash-db-terraform-state-lock"
 }

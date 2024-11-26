@@ -39,7 +39,7 @@ resource "aws_db_instance" "production" {
   instance_class          = "db.t4g.micro" # See instance pricing <https://aws.amazon.com/rds/postgres/pricing/?pg=pr&loc=2>
   multi_az                = false
   db_name                 = "mydatabase" # name is deprecated, use db_name instead
-  username                = "codewithmuh"
+  username                = "akash"
   skip_final_snapshot     = true
   publicly_accessible     = false
   backup_retention_period = 7
