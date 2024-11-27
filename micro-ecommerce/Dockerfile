@@ -30,4 +30,5 @@ COPY . /usr/src/app/
 # Expose the default Django port
 EXPOSE 8000
 
-
+# Run the Django application
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "config.wsgi:application"]
