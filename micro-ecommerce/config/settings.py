@@ -98,7 +98,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db()
+    'default': {
+        # 'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':     'mydatabase',
+        'USER':     'root',
+        'PASSWORD': 'root-123',
+        'HOST':     'production.cv2ii8siie27.us-east-1.rds.amazonaws.com',
+        'PORT':     '5432',
+    }
 }
 
 # Password validation
@@ -166,6 +174,28 @@ MEDIA_URL =  '/media/'
 MEDIA_BASE_PATH = 'uploads'
 
 CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOW_CREDENTIALS = False
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+]
+
+CSRF_TRUSTED_ORIGINS = ["http://ecs-load-balancer-944801366.us-east-1.elb.amazonaws.com"]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'apoloappauth',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 CELERY_BROKER_URL = env('RABBITMQ_URI')
 
