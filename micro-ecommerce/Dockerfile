@@ -31,4 +31,4 @@ COPY . /usr/src/app/
 EXPOSE 8000
 
 # Run the Django application
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "config.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "micro_ecommerce.config.wsgi:application"]
