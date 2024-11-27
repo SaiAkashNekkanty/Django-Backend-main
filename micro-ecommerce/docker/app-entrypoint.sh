@@ -24,7 +24,7 @@ python manage.py loaddata initial_data
 python manage.py collectstatic --noinput
 
 # Run Gunicorn server instead of Django's development server
-gunicorn --bind 0.0.0.0:8000 config.wsgi:application
+gunicorn config.wsgi:application --bind 0.0.0.0:8000
 
 # Uncomment this line if you need a background worker (e.g., for Celery)
 # celery -A your_project_name worker --loglevel=info
