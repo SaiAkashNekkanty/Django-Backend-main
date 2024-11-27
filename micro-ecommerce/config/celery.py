@@ -8,7 +8,7 @@ import os
 #                 PRODUCER SETTINGS                    #
 #------------------------------------------------------#
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'micro-ecommerce.config.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
 app = Celery('celery_app')
 

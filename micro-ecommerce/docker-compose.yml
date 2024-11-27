@@ -14,7 +14,14 @@ services:
       - database
       - rabbitmq
     networks:
-      - default
+      - default 
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      retries: 5
+      start_period: 10s
+      timeout: 5s  
+ 
 
   worker:
     build: .
@@ -27,7 +34,7 @@ services:
       - app
       - database
     networks:
-      - default
+      - default  
 
   database:
     container_name: "ecommerce-database"
