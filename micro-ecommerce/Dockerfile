@@ -6,6 +6,7 @@ ENV DOCKERIZE_VERSION v0.6.1
 ENV PYTHONUNBUFFERED 1
 ENV PATH $PATH:/usr/src/.local/bin
 
+
 # Set workspace directory
 WORKDIR /usr/src/app
 

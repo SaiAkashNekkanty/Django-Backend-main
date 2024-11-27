@@ -1,6 +1,8 @@
 #!/bin/bash
 
 cd /usr/src/app
+export PYTHONPATH=$PYTHONPATH:/usr/src/app
+
 
 # Ensure .env file exists, if not, copy it from .env.example
 if [ ! -f ".env" ]; then
