@@ -20,8 +20,6 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 # Copy only requirements.txt first to cache layer
 COPY requirements.txt /usr/src/app/
-
-RUN pip install gunicorn
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
