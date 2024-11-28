@@ -5,7 +5,7 @@ FROM python:3.9-slim
 ENV PYTHONUNBUFFERED=1 \
     DOCKERIZE_VERSION=v0.6.1 \
     PATH=/usr/src/.local/bin:$PATH
-
+ENV PYTHONPATH="/usr/src/app:$PYTHONPATH"
 # Set work directory
 WORKDIR /usr/src/app
 RUN apt-get update && apt-get install -y netcat-openbsd
