@@ -1,11 +1,9 @@
-# ecs.tf
-
 resource "aws_ecs_cluster" "main" {
   name = "ecs-cluster"
 }
 
 data "template_file" "ecs_app" {
-template = file("./modules/ecs/templates/ecs/ecs_app.json.tpl")
+  template = file("./modules/ecs/templates/ecs/ecs_app.json.tpl")
 
   vars = {
     app_image      = var.app_image
@@ -45,5 +43,8 @@ resource "aws_ecs_service" "main" {
     container_port   = var.app_port
   }
 
-  depends_on = [aws_alb_listener.front_end, aws_iam_role_policy_attachment.ecs-task-execution-role-policy-attachment]
+  depends_on = [
+    aws_alb_listener.front_end,
+    aws_iam_role_policy_attachment.ecs-task-execution-role-policy-attachment
+  ]
 }
