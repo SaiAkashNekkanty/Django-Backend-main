@@ -11,7 +11,7 @@ import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
 app = Celery('celery_app')
-app = Celery('micro_ecommerce', broker='pyamqp://admin:admin@rabbitmq:5672//')
+
 '''
 Using a string here means the worker doesn't have to serialize
 the configuration object to child processes.
